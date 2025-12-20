@@ -130,9 +130,10 @@ elif nav == "View Database History":
         
         st.dataframe(df, use_container_width=True)
         
-        # Chart
+        
         fig = px.bar(df, x='name', y='score', color='score', title="Candidate Ranking",
                      color_continuous_scale='plasma')
         st.plotly_chart(fig, use_container_width=True)
     else:
+
         st.info("Database is empty. Analyze your first resume!")
